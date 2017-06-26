@@ -3,6 +3,29 @@
 
 	&--blue {
 		background-color: $mainBlue;
-		color: #fff;
+		color: $mainOrange;
+	}
+
+	&__main {
+		text-align: center;
+	    font-size: 4rem;
+	    display: block;
+	    position: absolute;
+	    top: 20%;
+	    left: 50%;
+	    -webkit-transform: translate(-50%, -50%);
+	    transform: translate(-50%);
+	    width: 70%;
+	    border: 6px solid $mainOrange;
+	    height: 400px;
+	    padding: 20px 0 20px 20px;
+	    font-family: 'Montserrat', sans-serif;
+	}
+
+	&__msg {
+		font-size: 8rem;
+		text-align: center;
+		font-family: 'PT Serif', serif;
+		padding: 2rem 0 0 0;
 	}
 }

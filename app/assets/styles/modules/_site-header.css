@@ -1,8 +1,10 @@
 .site-header {
 	position: absolute;
-	width: 100%;
+	height: 100%;
+	width: 36px;
+	padding: 0;
 	z-index: 2;
-	padding: 10px 0;
+	left: 0;
 	transition: background-color .3s ease-out;
 
 &--is-expanded {
@@ -14,7 +16,8 @@
 	}
 
 &__btn-container {
-	float: right;
+	float: none;
+	
 }
 
 &__logo {
@@ -96,14 +99,17 @@
 	transtion: all .3s ease-out;
 	z-index: -10;
 	position: relative;
-	padding-top: 100px;
-	text-align: center;
+	top: 50%;
+	left: 0;
+	transform: rotate(-90deg);
+    transform-origin: right, top;
+	
 
 	@mixin atMedium {
 		opacity: 1;
 		z-index: 1;
 		transform scale: (1);
-		padding-top: 0;
+		padding: 0;
 	}
 
 &--is-visible {

@@ -10361,21 +10361,31 @@
 			this.openModalButton = (0, _jquery2.default)(".open-modal");
 			this.modal = (0, _jquery2.default)(".modal");
 			this.closeModalButton = (0, _jquery2.default)(".modal__close");
+			this.events();
 		}
 
 		_createClass(Modal, [{
 			key: "events",
 			value: function events() {
 				// clicking modal open
+				this.openModalButton.click(this.openModal.bind(this));
 
-				//cli
+				// clicking the x close modal 
+				this.closeModalButton.click(this.closeModal.bind(this));
+				// pushes the escape key
+
 			}
 		}, {
 			key: "openModal",
-			value: function openModal() {}
+			value: function openModal() {
+				this.modal.addClass("modal--is-visible");
+				return false;
+			}
 		}, {
 			key: "closeModal",
-			value: function closeModal() {}
+			value: function closeModal() {
+				this.modal.removeClass("modal--is-visible");
+			}
 		}]);
 
 		return Modal;
